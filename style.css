@@ -1,0 +1,125 @@
+body{
+background-color :#326898;
+}
+h1 {
+    color: #fff; /* Couleur bleue */
+    text-align: center; /* Centre le texte */
+    padding:20px;
+background-color :#326898;
+}
+
+
+
+h2{
+	color: #fff;
+	text-align: center;}
+
+h3{	text-align: center;
+color:#fff}
+
+nav.menu-nav ul li.btn{list-style-type:none;
+} 
+nav.menu-nav ul li.btn a  {color :#fff;
+text-decoration :none;
+  font-weight: bold;
+}
+nav.menu-nav ul li.btn a i{margin-right :8px;}
+
+nav.menu-nav ul li {
+    margin-bottom: 25px; /* Augmente la valeur si tu veux plus d'espace */
+}
+
+nav.menu-nav ul li.btn a:hover {
+    color: #326898;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px; /* Effet arrondi */
+    display: inline-block;
+}
+
+nav.menu-nav ul li.btn a:hover i {
+    color: #326898; /* Assure-toi que l’icône change de couleur aussi */
+}
+
+
+.menu-nav {
+    display: flex;
+}
+
+.menu-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px; /* Ajuste la largeur selon ton besoin */
+    border-right: 2px solid white; /* Crée un trait vertical blanc */
+    padding-right: 10px;
+min-height: 100vh;
+}
+
+div.weather-dashboard {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* Blanc */
+    color: black; /* Noir pour une meilleure lisibilité */
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+position: absolute; /* Permet de le positionner précisément */
+    top: 55%; /* Positionne le haut du tableau au milieu */
+    left: 60%;
+    transform: translate(-50%, -50%); /* Centre parfaitement */
+
+
+}
+.location h2 {
+    color: #326898; /* Bleu */
+margin-left: 10%;
+}
+
+div.location {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #326898; /* Bleu foncé */
+
+}
+
+div.weather-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.temperature {
+  
+  margin-right: 20px; /* Pousse la température vers la droite */
+position:relative;
+top:10px;
+font-size:20px;}
+
+div.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #4a90e2; /* Bleu clair */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white;
+    color: white; /* Texte en blanc */
+}
+/* Ajouter une icône météo près de la température */
+.temperature::after {
+    content: "☀️"; /* Icône de soleil, change selon la météo */
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+
+
