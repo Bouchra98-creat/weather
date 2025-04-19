@@ -17,7 +17,35 @@
         </ul>
     </nav>
 
+<div class="weather-dashboard">
+        <div class="location">
+            <h2>Oran</h2>
+            <span class="temperature" id="temperature"><?php echo htmlspecialchars($dernieres_donnees['temperature']); ?>°C</span>
+        </div>
+        <div class="weather-details" id="weather-data">
+            <div class="circle"> <?php echo htmlspecialchars($dernieres_donnees['pression']); ?> hPa <br> Pression</div>
+            <div class="circle"> <?php echo htmlspecialchars($dernieres_donnees['luminosite']); ?> lux <br> Luminosité</div>
+            <div class="circle"> <?php echo htmlspecialchars($dernieres_donnees['humidite']); ?> %<br> Humidite</div>
+            
+        </div>
+    </div>
 
+    <script>
+       function updateWeather() {
+    fetch('data.php')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('temperature').innerText = data.temperature + '°C';
+            document.getElementById('weather-data').innerHTML = `
+                <div class="circle"> ${data.pression} hPa <br> Pression</div>
+                <div class="circle"> ${data.luminosite} lux <br> Luminosité</div>
+                <div class="circle"> ${data.humidite} <br> Humidite</div>
+            `;  // <-- Ici, le guillemet fermant manquait
+        })
+        .catch(error => console.error('Erreur lors de la mise à jour des données :', error));
+}
 
+        setInterval(updateWeather, 600000); // Met à jour toutes les 10 minutes
+    </script>
 </body>
 </html>
